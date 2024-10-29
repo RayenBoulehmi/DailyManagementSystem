@@ -1,0 +1,72 @@
+2024-09-23 14:54:24,349 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application using Java 1.8.0_422 on marwen-B450M-DS3H with PID 25581 (/home/marwen/Documents/DAILY/target/classes started by marwen in /home/marwen/Documents/DAILY)
+2024-09-23 14:54:24,351 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-09-23 14:54:24,353 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2024-09-23 14:54:24,385 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-23 14:54:24,386 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-23 14:54:24,935 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-09-23 14:54:24,996 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 57 ms. Found 7 MongoDB repository interfaces.
+2024-09-23 14:54:25,429 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8888 (http)
+2024-09-23 14:54:25,436 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8888"]
+2024-09-23 14:54:25,436 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-09-23 14:54:25,436 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.75]
+2024-09-23 14:54:25,473 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-09-23 14:54:25,474 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1088 ms
+2024-09-23 14:54:25,593 INFO com.mongodb.diagnostics.logging.SLF4JLogger [restartedMain] MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Linux", "name": "Linux", "architecture": "amd64", "version": "5.15.0-122-generic"}, "platform": "Java/Private Build/1.8.0_422-8u422-b05-1~20.04-b05"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@4f1abac]}, clusterSettings={hosts=[0.0.0.0:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2024-09-23 14:54:25,602 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-rtt-ClusterId{value='66f17311d28c657585f33ac4', description='null'}-0.0.0.0:27017] Opened connection [connectionId{localValue:2, serverValue:2}] to 0.0.0.0:27017
+2024-09-23 14:54:25,602 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='66f17311d28c657585f33ac4', description='null'}-0.0.0.0:27017] Opened connection [connectionId{localValue:1, serverValue:1}] to 0.0.0.0:27017
+2024-09-23 14:54:25,603 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='66f17311d28c657585f33ac4', description='null'}-0.0.0.0:27017] Monitor thread successfully connected to server with description ServerDescription{address=0.0.0.0:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=16231011}
+2024-09-23 14:54:25,959 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-09-23 14:54:26,101 INFO com.mongodb.diagnostics.logging.SLF4JLogger [restartedMain] Opened connection [connectionId{localValue:3, serverValue:3}] to 0.0.0.0:27017
+2024-09-23 14:54:26,113 INFO com.daily.ApplicationInit [restartedMain] Saving role: ROLE_ADMIN
+2024-09-23 14:54:26,235 INFO com.daily.ApplicationInit [restartedMain] Saving role: ROLE_USER
+2024-09-23 14:54:26,239 INFO com.daily.ApplicationInit [restartedMain] Creating Admin Account
+2024-09-23 14:54:26,239 INFO com.daily.ApplicationInit [restartedMain] Username: admin
+2024-09-23 14:54:26,239 INFO com.daily.ApplicationInit [restartedMain] Email: daily@mpfavd.fsjegj
+2024-09-23 14:54:26,239 INFO com.daily.ApplicationInit [restartedMain] Password: 123456
+2024-09-23 14:54:26,414 INFO com.daily.ApplicationInit [restartedMain] Admin account created successfully
+2024-09-23 14:54:26,485 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@525094ac, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@f704545, org.springframework.security.web.context.SecurityContextPersistenceFilter@4eb5d603, org.springframework.security.web.header.HeaderWriterFilter@2a6dac45, org.springframework.web.filter.CorsFilter@1bab3e09, org.springframework.security.web.authentication.logout.LogoutFilter@3c6b9ec4, com.daily.security.jwt.AuthTokenFilter@50e1fbd4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6d552023, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2d43385c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@16f69a54, org.springframework.security.web.session.SessionManagementFilter@51601ac0, org.springframework.security.web.access.ExceptionTranslationFilter@3e3f9386, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@310d8e05]
+2024-09-23 14:54:27,178 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8888"]
+2024-09-23 14:54:27,190 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8888 (http) with context path '/api/v1'
+2024-09-23 14:54:27,198 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Application in 3.089 seconds (JVM running for 3.432)
+2024-09-23 19:29:27,494 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8888-exec-1] Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x000x9a0x010x000x000x960x030x03p ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:263)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+2024-09-23 20:57:43,330 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='66f17311d28c657585f33ac4', description='null'}-0.0.0.0:27017] Exception in monitor thread while connecting to server 0.0.0.0:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:135)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:713)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:571)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:410)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:369)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:221)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:157)
+	at java.lang.Thread.run(Thread.java:750)
+2024-09-23 20:57:43,351 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='66f17311d28c657585f33ac4', description='null'}-0.0.0.0:27017] Exception in monitor thread while connecting to server 0.0.0.0:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:157)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:204)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 4 common frames omitted

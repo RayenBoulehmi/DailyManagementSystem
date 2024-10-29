@@ -1,0 +1,137 @@
+<div class="grid">
+	<div class="col-12">
+		<div class="card">
+			<h5>Daily Objectif</h5>
+			<p-table #dt1 [value]="notificationData" dataKey="date" [rows]="10" [loading]="loading" [rowHover]="true" 
+					 styleClass="p-datatable-gridlines" [paginator]="true" [globalFilterFields]="['date', 'isObjDPU', 'isObjNQInt', 'isObjPPMClient']" 
+					 responsiveLayout="scroll">
+				<ng-template pTemplate="caption">
+					<div class="flex justify-content-between flex-column sm:flex-row">
+						<button pButton label="Clear" class="p-button-outlined mb-2" icon="pi pi-filter-slash" (click)="clear(dt1)"></button>
+						<span class="p-input-icon-left mb-2">
+							<i class="pi pi-search"></i>
+							<input pInputText type="text" #filter (input)="onGlobalFilter(dt1, $event)" placeholder="Search Keyword" class="w-full"/>
+						</span>
+					</div>
+				</ng-template>
+
+				<ng-template pTemplate="header">
+					<tr>
+						<th>
+							<div class="flex justify-content-between align-items-center">
+								Day
+								<p-columnFilter type="date" field="date" display="menu" placeholder="mm/dd/yyyy"></p-columnFilter>
+							</div>
+						</th>
+						<th>
+							<div class="flex justify-content-between align-items-center">
+								ISOBJEFFBRUT
+								<p-columnFilter type="numeric" field="ISOBJEFFBRUT" display="menu" placeholder="Search by ISOBJEFFBRUT"></p-columnFilter>
+							</div>
+						</th>
+						<th>
+							<div class="flex justify-content-between align-items-center">
+								ISOBJEFFNET
+								<p-columnFilter type="numeric" field="ISOBJEFFNET" display="menu" placeholder="Search by ISOBJEFFNET"></p-columnFilter>
+							</div>
+						</th>
+						<th>
+							<div class="flex justify-content-between align-items-center">
+								IsAbs
+								<p-columnFilter type="numeric" field="IsAbs" display="menu" placeholder="Search by Absence"></p-columnFilter>
+							</div>
+						</th>
+						<th>
+							<div class="flex justify-content-between align-items-center">
+								IsPolyvalence
+								<p-columnFilter type="numeric" field="IsPolyvalence" display="menu" placeholder="Search by Polyvalence"></p-columnFilter>
+							</div>
+						</th>
+						<th>
+							<div class="flex justify-content-between align-items-center">
+								iSObjOTD
+								<p-columnFilter type="numeric" field="iSObjOTD" display="menu" placeholder="Search by OTD"></p-columnFilter>
+							</div>
+						</th>
+						<th>
+							<div class="flex justify-content-between align-items-center">
+								iSObjOTP
+								<p-columnFilter type="numeric" field="iSObjOTP" display="menu" placeholder="Search by OTP"></p-columnFilter>
+							</div>
+						</th>
+						<th>
+							<div class="flex justify-content-between align-items-center">
+								isObjDPU
+								<p-columnFilter type="numeric" field="isObjDPU" display="menu" placeholder="Search by DPU"></p-columnFilter>
+							</div>
+						</th>
+						<th>
+							<div class="flex justify-content-between align-items-center">
+								isObjNQExt
+								<p-columnFilter type="numeric" field="isObjNQExt" display="menu" placeholder="Search by External Quality"></p-columnFilter>
+							</div>
+						</th>
+						<th>
+							<div class="flex justify-content-between align-items-center">
+								isObjNQInt
+								<p-columnFilter type="numeric" field="isObjNQInt" display="menu" placeholder="Search by Internal Quality"></p-columnFilter>
+							</div>
+						</th>
+						<th>
+							<div class="flex justify-content-between align-items-center">
+								isObjPPMClient
+								<p-columnFilter type="numeric" field="isObjPPMClient" display="menu" placeholder="Search by PPM Client"></p-columnFilter>
+							</div>
+						</th>
+						<th>
+							<div class="flex justify-content-between align-items-center">
+								isObjPPMInt
+								<p-columnFilter type="numeric" field="isObjPPMClient" display="menu" placeholder="Search by PPM Client"></p-columnFilter>
+							</div>
+						</th>
+						<th>
+							<div class="flex justify-content-between align-items-center">
+								Status								
+							</div>
+
+						</th>
+					</tr>
+				</ng-template>
+
+				<ng-template pTemplate="body" let-entry>
+					<tr>
+						<td>{{ entry.date | date: 'MM/dd/yyyy' }}</td>
+						<td>{{ entry.ISOBJEFFBRUT }}</td>
+						<td>{{ entry.ISOBJEFFNET }}</td>
+						<td>{{ entry.IsAbs }}</td>
+						<td>{{ entry.IsPolyvalence }}</td>
+						<td>{{ entry.iSObjOTD }}</td>
+						<td>{{ entry.iSObjOTP }}</td>
+						<td>{{ entry.isObjDPU }}</td>
+						<td>{{ entry.isObjNQExt }}</td>
+						<td>{{ entry.isObjNQInt }}</td>
+						<td>{{ entry.isObjPPMClient }}</td>
+						<td>{{ entry.isObjPPMInt }}</td>
+						
+						<td [ngStyle]="{'background-color': getStatusColor(entry.TotalObjectives), 'color': 'white', 'padding': '5px'}">
+							{{ getStatusLabel(entry.TotalObjectives) }}
+						</td>
+						
+					</tr>
+				</ng-template>
+
+				<ng-template pTemplate="emptymessage">
+					<tr>
+						<td colspan="12">No data found.</td>
+					</tr>
+				</ng-template>
+
+				<ng-template pTemplate="loadingbody">
+					<tr>
+						<td colspan="12">Loading data. Please wait...</td>
+					</tr>
+				</ng-template>
+			</p-table>
+		</div>
+	</div>
+</div>

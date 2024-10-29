@@ -1,0 +1,13 @@
+Categorie,Name Catégorie,Ref,NZONE,NAtelier,NUnité,RefProduit,Etat
+Q,Quality ,QUA/001,ZONE.1,ATEL.1,Unit.1,SF1.M32,In progress
+Q,Quality ,QUA/002,ZONE.3,ATEL.1,Unit.1,SF1.90VU,In progress
+Q,Quality ,QUA/003,ZONE.7,ATEL.3,Unit.2,SF3.M32,Cloturé
+Q,Quality ,QUA/004,ZONE.11,ATEL.4,Unit.2,PPE21,Late 
+Q,Quality ,QUA/005,ZONE.5,ATEL.2,Unit.1,SF2.PPE21,Late 
+Q,Quality ,QUA/006,ZONE.8,ATEL.3,Unit.2,SF3.PPE21,Cloturé
+S,Safety,SAF/001,ZONE.2,ATEL.1,Unit.1,SF1.PPE21,In progress
+S,Safety,SAF/002,ZONE.3,ATEL.1,Unit.1,SF2.M32,In progress
+D,Delivery,OTD/001,ZONE.10,ATEL.4,Unit.2,M32,Cloturé
+D,Delivery,OTD/002,ZONE.11,ATEL.4,Unit.2,PPE21,In progress
+D,Delivery,OTD/003,ZONE.12,ATEL.4,Unit.2,90VU,In progress
+

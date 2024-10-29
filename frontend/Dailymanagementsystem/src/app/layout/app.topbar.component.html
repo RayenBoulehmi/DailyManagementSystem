@@ -1,0 +1,37 @@
+<div class="layout-topbar">
+    <a class="layout-topbar-logo" routerLink="">
+        <img src="assets/demo/images/daily-logo.png" alt="Management System Logo">
+        <span>Management System</span>
+    </a>
+
+    <button #menubutton class="p-link layout-menu-button layout-topbar-button" (click)="layoutService.onMenuToggle()">
+        <i class="pi pi-bars"></i>
+    </button>
+
+    <button #topbarmenubutton class="p-link layout-topbar-menu-button layout-topbar-button" (click)="layoutService.showProfileSidebar()">
+        <i class="pi pi-ellipsis-v"></i>
+    </button>
+
+    <div #topbarmenu class="layout-topbar-menu" [ngClass]="{'layout-topbar-menu-mobile-active': layoutService.state.profileSidebarVisible}">
+      
+        <button pButton type="button" (click)="toggleCalendar()"><i class="pi pi-calendar"></i></button>
+
+<p-calendar 
+  *ngIf="displayCalendar" 
+  [(ngModel)]="currentDate" 
+  [showIcon]="true"
+  [showButtonBar]="true"
+  [dateFormat]="'mm/dd/yy'"
+  [showTodayButton]="true"
+></p-calendar>
+        <button class="p-link layout-topbar-button" (click)="toggleMenu()">
+            <i class="pi pi-user"></i>
+            <span>Settings</span>
+        </button>
+        <div class="menu" *ngIf="showMenu">
+            <ul>
+                <li (click)="logout()"><i class="pi pi-sign-out"></i> Logout</li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+version: '3.8'  # Updated to a more recent version for better features
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: my-mongo-container
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:
+      - ./mongodb_data:/data/db  # Use /data/db for MongoDB data storage
+  
+
+  angular:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile  # Specify the Dockerfile if it's not named 'Dockerfile'
+    container_name: angular
+    restart: always
+    ports:
+      - 4200:4200
+    depends_on:
+      - springboot
+    environment:  # Pass any environment variables needed for Angular
+      - API_URL=http://springboot:8888/api/v1  # Use internal Docker networking
+
+  springboot:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile  # Specify the Dockerfile if it's not named 'Dockerfile'
+    container_name: springboot
+    restart: always
+    ports:
+      - 8888:8888
+    depends_on:
+      - mongodb
+    environment:  # Pass any environment variables needed for Spring Boot
+      - SPRING_DATA_MONGODB_URI=mongodb://mongodb:27017/managementsystemdetection  # Connect to MongoDB with credentials
+
+networks:
+  default:
+    driver: bridge  # Explicitly define a network for better isolation

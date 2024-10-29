@@ -1,0 +1,38 @@
+.layout-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.layout-topbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.layout-topbar-logo img {
+    margin-right: 10px;
+}
+
+.layout-topbar-button {
+    margin-right: 10px;
+}
+
+.layout-topbar-menu {
+    position: relative;
+}
+
+.menu {
+    position: absolute;
+    top: 40px; /* Adjust according to your layout */
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.full-width-calendar {
+    width: 100%;
+}

@@ -1,0 +1,190 @@
+<div class="grid">
+    <!-- Filter Section -->
+    <div class="col-12">
+        <div class="card mb-3">
+            <div class="flex justify-content-between mb-2">
+                <span class="block text-500 font-medium">Filter</span>
+            </div>
+            <div class="p-grid filter-container">
+                <div class="p-col-12 p-md-3">
+                    <label for="zone-select">Zone:</label>
+                    <p-dropdown 
+                        id="zone-select" 
+                        [options]="zoneOptions" 
+                        [(ngModel)]="selectedZone"
+                        (onChange)="onFilterChange()" 
+                        placeholder="Select Zone">
+                    </p-dropdown>
+                </div>
+                <div class="p-col-12 p-md-3">
+                    <label for="semaines-select">Semaines:</label>
+                    <p-dropdown 
+                        id="semaines-select" 
+                        [options]="semainesOptions" 
+                        [(ngModel)]="selectedSemaines" 
+                        (onChange)="onFilterChange()" 
+                        placeholder="Select Semaines">
+                    </p-dropdown>
+                </div>
+                <div class="p-col-12 p-md-3">
+                    <label for="date-select">Date:</label>
+                    <p-dropdown 
+                        id="date-select" 
+                        [options]="dateOptions" 
+                        [(ngModel)]="selectedDate" 
+                        (onChange)="onFilterChange()" 
+                        placeholder="Select Date">
+                    </p-dropdown>
+                </div>
+                <div class="p-col-12 p-md-3">
+                    <label for="article-option">Article:</label>
+                    <p-dropdown 
+                        id="article-option" 
+                        [options]="articleOptions" 
+                        [(ngModel)]="selectedArticle" 
+                        (onChange)="onFilterChange()" 
+                        placeholder="Select Article">
+                    </p-dropdown>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Charts Section -->
+    <div class="col-12 lg:col-6 xl:col-6">
+        <div class="card responsive-card mb-3">
+            <div class="chart-header">
+                <span class="block text-500 font-medium">Production Volume</span>
+                <i class="pi pi-shopping-cart text-blue-500 text-xl"></i>
+            </div>
+            <div class="chart-container">
+                <canvas id="pieChartVolumProduct"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 lg:col-6 xl:col-6">
+        <div class="card responsive-card mb-3">
+            <div class="chart-header">
+                <span class="block text-500 font-medium">Travail en Cours (WIP)</span>
+                <i class="pi pi-briefcase text-yellow-500 text-xl"></i>
+            </div>
+            <div class="chart-container">
+                <canvas id="travailEnCoursWIPChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 lg:col-6 xl:col-4">
+        <div class="card responsive-card mb-3">
+            <div class="chart-header">
+                <span class="block text-500 font-medium">Deliveries</span>
+                <i class="pi pi-inbox text-cyan-500 text-xl"></i> 
+            </div>
+            <div class="chart-container">
+                <canvas id="BarChartDelivery"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 lg:col-6 xl:col-4">
+        <div class="card responsive-card mb-3">
+            <div class="chart-header">
+                <span class="block text-500 font-medium">Revenue</span>
+                <i class="pi pi-money-bill text-orange-500 text-xl"></i>  
+            </div>
+            <div class="chart-container">
+                <canvas id="lineChartRevenue"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Charts -->
+    <div class="col-12 lg:col-6 xl:col-4">
+        <div class="card responsive-card mb-3">
+            <div class="chart-header">
+                <span class="block text-500 font-medium">Quantité Retardée Production</span>
+                <i class="pi pi-calendar text-pink-500 text-xl"></i> 
+            </div>
+            <div class="chart-container">
+                <canvas id="quantiteRetardeeProductionChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 lg:col-6 xl:col-4">
+        <div class="card responsive-card mb-3">
+            <div class="chart-header">
+                <span class="block text-500 font-medium">Quantité Retardée Livraison</span>
+                <i class="pi pi-clock text-purple-500 text-xl"></i> 
+            </div>
+            <div class="chart-container">
+                <canvas id="quantiteRetardeeLivraisonChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 lg:col-6 xl:col-4">
+        <div class="card responsive-card mb-3">
+            <div class="chart-header">
+                <span class="block text-500 font-medium">Taux de Défaut</span>
+                <i class="pi pi-chart-line text-teal-500 text-xl"></i> 
+            </div>
+            <div class="chart-container">
+                <canvas id="tauxDefautChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 lg:col-6 xl:col-4">
+        <div class="card responsive-card mb-3">
+            <div class="chart-header">
+                <span class="block text-500 font-medium">Jour de Stockage</span>
+                <i class="pi pi-check text-green-500 text-xl"></i> 
+                <i class="pi pi-calendar text-indigo-500 text-xl"></i>
+            </div>
+            <div class="chart-container">
+                <canvas id="jourDeStockageChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+ 
+
+    <div class="col-12 lg:col-6 xl:col-4">
+        <div class="card responsive-card mb-3">
+            <div class="chart-header">
+                <span class="block text-500 font-medium">Livraison à Temps</span>
+                <i class="pi pi-check text-green-500 text-xl"></i>
+            </div>
+            <div class="chart-container">
+                <canvas id="livraisonATempChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 lg:col-6 xl:col-4">
+        <div class="card responsive-card mb-3">
+            <div class="chart-header">
+                <span class="block text-500 font-medium">Absenteisme</span>
+                <i class="pi pi-users text-red-500 text-xl"></i> 
+               
+            </div>
+            <div class="chart-container">
+                <canvas id="absenteismeChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 lg:col-6 xl:col-4">
+        <div class="card responsive-card mb-3">
+            <div class="chart-header">
+                <span class="block text-500 font-medium">Safety</span>
+                <i class="pi pi-shield text-gray-500 text-xl"></i>
+            </div>
+            <div class="chart-container">
+                <canvas id="safetyChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
